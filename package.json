@@ -1,0 +1,20 @@
+{
+  "name": "final_kode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mysass": "node-sass style.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinaidrissi/afsluttendeEksamen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinaidrissi/afsluttendeEksamen/issues"
+  },
+  "homepage": "https://github.com/dinaidrissi/afsluttendeEksamen#readme"
+}
