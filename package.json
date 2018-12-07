@@ -1,5 +1,5 @@
 {
-  "name": "final_kode",
+  "name": "exam",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dinaidrissi/afsluttendeEksamen/issues"
   },
-  "homepage": "https://github.com/dinaidrissi/afsluttendeEksamen#readme"
+  "homepage": "https://github.com/dinaidrissi/afsluttendeEksamen#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
 }
