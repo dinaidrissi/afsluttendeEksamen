@@ -183,10 +183,7 @@ ul.social-icons {
     padding-bottom: 20px;
     height: 100%;
     background-color: #fff;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-radius: 15px;
 }
 /* Overskrifter & brødtekst*/
 .Top_overskrift{
@@ -222,6 +219,82 @@ p{
     width: 100%;
     height: 25%;
 }
+
+/* KONTAKT MIG*/
+  /* Add a background color and some padding around the form */
+  .section_kontakt{
+    width: 70vw;
+    padding-top:2vw;
+    padding-bottom:15vw;
+    margin:auto;
+    background-color: #BED4D9
+  }
+.section_kontakt p{
+font-family: $tekst;
+color:#fff;
+font-size:15px;
+}
+.kontakt_main{
+    width: 85vw;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    background-color: #BED4D9;
+    border-radius: 15px;
+}
+.kontakt_container{
+    width: 70vw;
+    padding-top:2vw;
+    padding-bottom:15vw;
+    margin:auto;
+    background-color: #BED4D9;
+   
+}
+label {
+    color:#fff;
+ font-family: $tekst;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            /* Full width */
+            padding: 12px;
+            /* Some padding */
+            border: 1px solid #ccc;
+            /* Gray border */
+            border-radius: 4px;
+            /* Rounded borders */
+            box-sizing: border-box;
+            /* Make sure that padding and width stays in place */
+            margin-top: 6px;
+            /* Add a top margin */
+            margin-bottom: 16px;
+            /* Bottom margin */
+            resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+
+        #myButton {
+            background-color: #4AA5BD;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        /* When moving the mouse over the submit button, add a darker green color */
+
+    #myButton:hover {
+            background-color: #c7d0db;
+        }
+
+      
+
 /*FOOTER*/
 
 footer {

@@ -55,8 +55,12 @@
       
 </header><div class="main_wrapper">
         <h2 class="Top_overskrift">KONTAKT MIG</h2>
-<div class="main">
-        <div class="container">
+<div class="kontakt_main">
+    <article id="kontaktcontainer">
+        <template id="kontakt-template">
+            <section class="section_kontakt">
+                    <p class="data-text"></p>
+        <div class="kontakt_container">
                 <form >
         
                     <label for="fname">Fornavn</label>
@@ -75,22 +79,61 @@
                     <textarea id="subject" name="subject" placeholder="Skriv emne.." style="height:200px"></textarea>
                     
         <label for="årsag">Årsag</label>
-                    <input type="text" id="message" value="" placeholder="Hvad kan vi hjælpe med??" class="Tak for din besked! CheapMeal vender tilbage til dig, hurtigst muligt.">
+                    <input type="text" id="message" value="" placeholder="Hvad kan jeg hjælpe dig med?" class="Tak for din besked! Jeg vil vende tilbage til dig, hurtigst muligt.">
         <br>
         <button id="myButton" type="button">Submit</button>
         
                 </form>  </div>
+                <div class="info">
+                            
+                            <p class="data-adresse"></p>
+                            <p class="data-postnummer"></p>
+                            <p class="data-land"></p>
+                            <p class="data-mobil"></p>
+                            <p class="data-mail"></p>
+                        </div>
+            </section></template> </article>
 </div>
 
 
     <footer>
              <p><b>Zimmer Optik, København - Nordvest</b>
             <br> Phone: + 45 38 33 44 05
-            <br>E-mail:<a href="mailto:info@zimmeroptik.com"> tamakua@gmail.com</a></p>
+            <br>E-mail:<a href="mailto:info@zimmeroptik.com"> info@zimmeroptik.com</a></p>
         
     </footer></div>
     <script src="mobilmenu.js"></script>
     <script src="main.js"></script>
+    <script>
+     
+document.addEventListener("DOMContentLoaded", function(kontakt){
+            toggleMenu();
+        });
+        
+        let minTemplate = document.querySelector("#kontakt-template");
+        let templateModtager = document.querySelector("#kontaktcontainer");
+        
+        async function getJson(){
+            let kontaktObject = await fetch ("http://zimmer.dinaidrissi.dk/wp-json/wp/v2/kontakt/");
+            let kontakts = await kontaktObject.json();
+            kontakts.forEach(function(kontakt){
+                console.log(kontakt.acf.tlf_nummer);
+                
+                let klon = minTemplate.cloneNode(true).content
+                klon.querySelector(".data-text").innerHTML = kontakt.acf.kontakt_tekst;
+                klon.querySelector(".data-adresse").textContent = kontakt.acf.adresse;
+                klon.querySelector(".data-postnummer").textContent = kontakt.acf.postnummer;
+                klon.querySelector(".data-mobil").innerHTML = kontakt.acf.tlf_nummer;
+                klon.querySelector(".data-land").textContent = kontakt.acf.land_by;
+                klon.querySelector(".data-mail").textContent = kontakt.acf.mail;
+                
+                templateModtager.appendChild(klon);
+            }); 
+        }
+        
+        document.addEventListener("DOMContentLoaded", getJson);
+    </script>
+</script>
 
 </body>
 </html>
