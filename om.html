@@ -54,12 +54,23 @@
             </nav>
       
 </header><div class="main_wrapper">
-        <h2 class="Top_overskrift">FORSIDE</h2>
+        <h2 class="Top_overskrift">OM MIG</h2>
 <div class="main">
-    
+    <article id="omcontainer">
+        <template id="om-template">
+            <section class="section_om">
+                <div class="om">
+                    <h2>Grundlag:</h2>
+                    <p class="data-grundlag"></p>
+                    <img src="" class="data-picture1">
+                    <h2>Baggrund:</h2>
+                    <p class="data-baggrund"></p>
+                    <img src="" class="data-profilpicture" alt="">
+                </div>
+            </section>
+        </template>
+    </article>
 </div>
-
-
     <footer>
              <p><b>Zimmer Optik, København - Nordvest</b>
             <br> Phone: + 45 38 33 44 05
@@ -68,6 +79,30 @@
     </footer></div>
     <script src="mobilmenu.js"></script>
     <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",
+        function(om){
+            toggleMenu();
+        });
+        let minTemplate = document.querySelector("#om-template");
+        let templateModtager = document.querySelector("#omcontainer");
+
+        async function getJson(){
+            let omObject = await fetch("http://zimmer.dinaidrissi.dk/wp-json/wp/v2/om?per_page=10");
+            let oms = await omObject.json();
+            oms.forEach(function(om){
+                console.log(om.acf.intro_text);
+                let klon = minTemplate.cloneNode(true).content
+                klon.querySelector(".data-baggrund").innerHTML = om.acf.intro_text;
+                klon.querySelector(".data-grundlag").innerHTML = om.acf.textbox1;
+                klon.querySelector(".data-profilpicture").setAttribute("src",om.acf.profilpicture);
+                klon.querySelector(".data-picture1").setAttribute("src",om.acf.picture1);
+
+            templateModtager.appendChild(klon);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", getJson);
+    </script>
 
 </body>
 </html>

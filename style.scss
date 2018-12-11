@@ -1,4 +1,6 @@
 $hell :#56667D;
+$overskrift:'Lato', sans-serif;
+$tekst: 'Open Sans', sans-serif;
 html{
     height:100%;
     padding: 0;
@@ -11,6 +13,7 @@ body {
     background-color: #F4F4F5;
 }
 
+
 // Header
 header{
     background-color:#fff ;
@@ -19,6 +22,7 @@ header{
 a{
     text-decoration: none;
 }
+
 
 .nav_desk{
     display:none;
@@ -64,9 +68,9 @@ a{
         text-decoration: none;
         font-weight: 300;
         color: #191312;
-        font-family: 'Barlow Condensed', sans-serif;
+        font-family: $overskrift;
     }
-    .nav_mobil a:hover{
+    .nav_desk a:hover{
         background-color: #4AA5BD;
         color: #fff;
         border-bottom-right-radius: 10%;
@@ -173,18 +177,19 @@ ul.social-icons {
     position: relative;
 }
 .main{
-    width: 75vw;
+    width: 85vw;
     margin: auto;
-     margin-top: 20px;
-    height: 100px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
     background-color: #fff;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
-/* FORSIDE*/
-.overskrift_forside{
+/* Overskrifter & brødtekst*/
+.Top_overskrift{
     text-align: center;
     background-color: #4AA5BD;
     color:#fff;
@@ -196,7 +201,26 @@ ul.social-icons {
     border-top-left-radius: 15px;
     width: 35vw;
     margin: auto;
+}
+p{
+    font-family: $tekst;
+    font-size: 15px;
+}
 
+/* OM MIG*/
+.om{
+    width: 70vw;
+    padding-top:2vw;
+    padding-bottom:15vw;
+    margin:auto;
+}
+.data-profilpicture{
+    width: 100%;
+}
+
+.data-picture1{
+    width: 100%;
+    height: 25%;
 }
 /*FOOTER*/
 
@@ -215,7 +239,7 @@ footer p {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.5em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $tekst;
 }
 
 footer a {
@@ -242,7 +266,7 @@ footer a:hover {
         text-decoration: none;
         font-weight: 300;
         color: #191312;
-        font-family: 'Barlow Condensed', sans-serif;
+        font-family: $overskrift;
     }
     .nav_mobil {
         display:none;
