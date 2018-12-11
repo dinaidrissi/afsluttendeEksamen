@@ -232,7 +232,7 @@ p{
 .section_kontakt p{
 font-family: $tekst;
 color:#fff;
-font-size:15px;
+font-size:20px;
 }
 .kontakt_main{
     width: 85vw;
@@ -248,7 +248,9 @@ font-size:15px;
     padding-bottom:15vw;
     margin:auto;
     background-color: #BED4D9;
-   
+}
+.maps{
+    margin-top: 10px;
 }
 label {
     color:#fff;

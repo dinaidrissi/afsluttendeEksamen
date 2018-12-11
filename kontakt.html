@@ -36,7 +36,7 @@
        <div class="footer-social-icons" style="float:left;padding:0px 15px">
                    <ul class="social-icons">
                        <li>
-                           <a href="https://www.facebook.com/CheapMeal-158002148213183/" class="social-icon"> <i class="fa fa-facebook fa-2x"></i></a>
+                           <a href="https://da-dk.facebook.com/pages/category/Sunglasses---Eyewear-Store/Zimmer-Optik-255640331138060/" class="social-icon"> <i class="fa fa-facebook fa-2x"></i></a>
                        </li></ul>
        </div>
         </div>
@@ -84,10 +84,11 @@
         <button id="myButton" type="button">Submit</button>
         
                 </form>  </div>
-                <div class="info">
-                            
+                <div class="maps"></div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.2541485579554!2d12.530459315915975!3d55.7019539805398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652524a114a089b%3A0x27ef4fd580445b7!2sFrederikssundsvej+33%2C+2400+K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1544553824044" width="310" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+             <div class="info">
                             <p class="data-adresse"></p>
-                            <p class="data-postnummer"></p>
                             <p class="data-land"></p>
                             <p class="data-mobil"></p>
                             <p class="data-mail"></p>
@@ -99,7 +100,7 @@
     <footer>
              <p><b>Zimmer Optik, København - Nordvest</b>
             <br> Phone: + 45 38 33 44 05
-            <br>E-mail:<a href="mailto:info@zimmeroptik.com"> info@zimmeroptik.com</a></p>
+            <br>E-mail:<a href="mailto:info@zimmeroptik.dk"> info@zimmeroptik.dk</a></p>
         
     </footer></div>
     <script src="mobilmenu.js"></script>
@@ -122,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function(kontakt){
                 let klon = minTemplate.cloneNode(true).content
                 klon.querySelector(".data-text").innerHTML = kontakt.acf.kontakt_tekst;
                 klon.querySelector(".data-adresse").textContent = kontakt.acf.adresse;
-                klon.querySelector(".data-postnummer").textContent = kontakt.acf.postnummer;
                 klon.querySelector(".data-mobil").innerHTML = kontakt.acf.tlf_nummer;
                 klon.querySelector(".data-land").textContent = kontakt.acf.land_by;
                 klon.querySelector(".data-mail").textContent = kontakt.acf.mail;

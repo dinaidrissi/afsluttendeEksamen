@@ -36,7 +36,7 @@
        <div class="footer-social-icons" style="float:left;padding:0px 15px">
                    <ul class="social-icons">
                        <li>
-                           <a href="https://www.facebook.com/CheapMeal-158002148213183/" class="social-icon"> <i class="fa fa-facebook fa-2x"></i></a>
+                           <a href="https://da-dk.facebook.com/pages/category/Sunglasses---Eyewear-Store/Zimmer-Optik-255640331138060/" class="social-icon"> <i class="fa fa-facebook fa-2x"></i></a>
                        </li></ul>
        </div>
         </div>
@@ -56,18 +56,62 @@
 </header><div class="main_wrapper">
         <h2 class="Top_overskrift">BAG MIN PROCESS</h2>
 <div class="main">
-    
+    <article id="processcontainer">
+        <template id="process-template">
+            <section class="section_process">
+                <p class="data-tekst1"></p>
+                <img src="" class="data-image1">
+                <img src="" class="data-image2">
+                <p class="data-tekst2"></p>
+                <img src="" class="data-image3">
+                <img src="" class="data-image4">
+                <img src="" class="data-image5">
+                <img src="" class="data-image6">
+                <img src="" class="data-image7">
+            </section>
+        </template>
+    </article>
 </div>
 
 
     <footer>
              <p><b>Zimmer Optik, København - Nordvest</b>
             <br> Phone: + 45 38 33 44 05
-            <br>E-mail:<a href="mailto:info@zimmeroptik.com"> tamakua@gmail.com</a></p>
+            <br>E-mail:<a href="mailto:info@zimmeroptik.dk"> info@zimmeroptik.dk</a></p>
         
     </footer></div>
     <script src="mobilmenu.js"></script>
     <script src="main.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(process){
+        toggleMenu();
+    });
+
+    let minTemplate = document.querySelector("#process-template");
+    let templateModtager = document.querySelector("#processcontainer");
+
+    async function getJson(){
+        let processObject = await fetch ("http://zimmer.dinaidrissi.dk/wp-json/wp/v2/bagminprocess/");
+        let processs = await processObject.json();
+        processs.forEach(function(process){
+            console.log(process.acf.tekst2);
+
+            let klon = minTemplate.cloneNode(true).content
+            klon.querySelector(".data-tekst1").innerHTML = process.acf.tekst1;
+            klon.querySelector(".data-image1").setAttribute("src", process.acf.image1);
+            klon.querySelector(".data-tekst2").innerHTML = process.acf.tekst2;
+            klon.querySelector(".data-image2").setAttribute("src", process.acf.image2);
+            klon.querySelector(".data-image3").setAttribute("src", process.acf.image3);
+            klon.querySelector(".data-image4").setAttribute("src", process.acf.image4);
+            klon.querySelector(".data-image5").setAttribute("src", process.acf.image5);
+            klon.querySelector(".data-image6").setAttribute("src", process.acf.image6);
+            klon.querySelector(".data-image7").setAttribute("src", process.acf.image7);
+
+            templateModtager.appendChild(klon);
+        });
+    }
+    document.addEventListener("DOMContentLoaded", getJson);
+    </script>
 
 </body>
 </html>
