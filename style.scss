@@ -185,6 +185,7 @@ ul.social-icons {
     background-color: #fff;
     border-radius: 15px;
     
+    
 }
 /* Overskrifter & brødtekst*/
 .Top_overskrift{
@@ -193,10 +194,7 @@ ul.social-icons {
     color:#fff;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-radius: 15px;
     width: 35vw;
     margin: auto;
 }
@@ -205,7 +203,7 @@ p{
     font-size: 25px;
 }
 
-/* Bad min process */
+/* Bag min process */
 .section_process img{
     width: 100%;
 }
@@ -214,6 +212,17 @@ p{
     min-height: 400px;
     background: transparent;
 }
+.parallax-window1 {
+    min-height: 600px;
+    width:100%;
+    background: transparent;
+    top:5vw;
+    
+}
+// .parallax_stilling{
+//     position: relative;
+//     min-height:100%;
+// }
 // .parallax{
 //     //position: absolute;
 // }
