@@ -55,6 +55,7 @@
       
 </header><div class="main_wrapper">
         <h2 class="Top_overskrift">BAG MIN PROCESS</h2>
+        
 <div class="main">
     <article id="processcontainer">
         <template id="process-template">
@@ -63,16 +64,23 @@
                 <img src="" class="data-image1">
                 <img src="" class="data-image2">
                 <p class="data-tekst2"></p>
-                <img src="" class="data-image3">
-                <img src="" class="data-image4">
-                <img src="" class="data-image5">
-                <img src="" class="data-image6">
-                <img src="" class="data-image7">
             </section>
         </template>
     </article>
-</div>
+   </div>
+   <div class="parallax">
+        <a href="http://facebook.com"> <div class="parallax-window" data-parallax="scroll" data-image-src="/WP_img/image7.jpg"></div></a>
+        <div class="parallax-window2" data-parallax="scroll"><p class="text">Her kan du læse mere om min process bag montering af glas i brillen. Jeg bestiller lige den glastype, som dine øjne har behov for, hjem til butikken. <br>For at finde ud af hvilen glastype dine øjne har brug for, så vil jeg foretage en synstest i butikken for at tjekke dine øjnes styrke og evt. bygningsfejl osv. Herefter bliver vi enig om en glastype, som vil være det perfekte fit for dig og dine øjne. Jeg har flere forskellig glastyper og tilhørende kataloger som du kan læse om i butikken, for flere informationer.</p></div></a>
+        <a href="http://facebook.com"> <div class="parallax-window" data-parallax="scroll" data-image-src="/WP_img/image9.jpg"></div></a>
+        <div class="parallax-window2" data-parallax="scroll"><p class="text">Montering af glasset, sker lige i butikken, så snart at brilleglasset er bestilt hjem. Herefter tilpasses og slibes glasset så den kan sidde i brillestellet, uden at være til gene.</p></div></a>
+   <a href="http://facebook.com"> <div class="parallax-window" data-parallax="scroll" data-image-src="/WP_img/image5.jpg"></div></a>
+                
+   <a href="http://facebook.com"> <div class="parallax-window" data-parallax="scroll" data-image-src="/WP_img/image3.jpg"></div></a> 
 
+   <a href="http://facebook.com"> <div class="parallax-window" data-parallax="scroll" data-image-src="WP_img/image4.jpg"></div></a> 
+
+   <a href="http://facebook.com"> <div class="parallax-window" data-parallax="scroll" data-image-src="WP_img/image2.jpg"></div></a> 
+</div>
 
     <footer>
              <p><b>Zimmer Optik, København - Nordvest</b>
@@ -80,12 +88,15 @@
             <br>E-mail:<a href="mailto:info@zimmeroptik.dk"> info@zimmeroptik.dk</a></p>
         
     </footer></div>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js"></script>
     <script src="mobilmenu.js"></script>
     <script src="main.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function(process){
-        toggleMenu();
-    });
+    // document.addEventListener("DOMContentLoaded", function(process){
+    //     toggleMenu();
+    // });
 
     let minTemplate = document.querySelector("#process-template");
     let templateModtager = document.querySelector("#processcontainer");
@@ -101,11 +112,11 @@
             klon.querySelector(".data-image1").setAttribute("src", process.acf.image1);
             klon.querySelector(".data-tekst2").innerHTML = process.acf.tekst2;
             klon.querySelector(".data-image2").setAttribute("src", process.acf.image2);
-            klon.querySelector(".data-image3").setAttribute("src", process.acf.image3);
-            klon.querySelector(".data-image4").setAttribute("src", process.acf.image4);
-            klon.querySelector(".data-image5").setAttribute("src", process.acf.image5);
-            klon.querySelector(".data-image6").setAttribute("src", process.acf.image6);
-            klon.querySelector(".data-image7").setAttribute("src", process.acf.image7);
+            //klon.querySelector(".data-image3").setAttribute("src", process.acf.image3);
+            //klon.querySelector(".data-image4").setAttribute("src", process.acf.image4);
+            //klon.querySelector(".data-image5").setAttribute("src", process.acf.image5);
+            //klon.querySelector(".data-image6").setAttribute("src", process.acf.image6);
+            //klon.querySelector(".data-image7").setAttribute("src", process.acf.image7);
 
             templateModtager.appendChild(klon);
         });

@@ -184,6 +184,7 @@ ul.social-icons {
     height: 100%;
     background-color: #fff;
     border-radius: 15px;
+    
 }
 /* Overskrifter & brødtekst*/
 .Top_overskrift{
@@ -201,9 +202,33 @@ ul.social-icons {
 }
 p{
     font-family: $tekst;
-    font-size: 15px;
+    font-size: 25px;
 }
 
+/* Bad min process */
+.section_process img{
+    width: 100%;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+// .parallax{
+//     //position: absolute;
+// }
+.parallax-window2 {
+    padding: 15px 10px;
+    min-height: 150px;
+    background: transparent;
+    background-color: #c7d0db;
+}
+.parallax-window2 p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em;
+}
 /* OM MIG*/
 .om{
     width: 70vw;
